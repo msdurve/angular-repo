@@ -1,2 +1,3 @@
 # angular-repo
-Angular Code Check-In
+Angular Code Check-In 
+Using Git 
