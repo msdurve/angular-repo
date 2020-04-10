@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 export class ServerComponent{
     id : number = 10 ;
     name : string = 'Server1' ; 
+    nameToTestGit = 'TestGit' ; 
     serverStatus : string =  'offline';
 
     constructor(){
