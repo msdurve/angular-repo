@@ -1,9 +1,12 @@
 <div class="row">
     <div class="col-md-5">
         <app-recipe-list ></app-recipe-list>
+        <!-- <router-outlet></router-outlet> -->
     </div>
     <div class="col-md-7">
-        <app-recipe-details [recipeDetailsEl] = "recipeDetails"  *ngIf="recipeDetails; else infoText" ></app-recipe-details>
-        <ng-template #infoText>Please select a Recipe</ng-template>
+         <!-- <app-recipe-details [recipeDetailsEl] = "recipeDetails"  *ngIf="recipeDetails; else infoText" ></app-recipe-details> 
+         <ng-template #infoText>Please select a Recipe</ng-template> -->
+         <router-outlet ></router-outlet> 
+          <!-- <ng-template #infoText>Please select a Recipe</ng-template>  -->
     </div>
 </div>

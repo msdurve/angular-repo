@@ -15,6 +15,10 @@ export class RecipeService{
         [new Ingredient('Potaot' , 3 ) , new Ingredient('Chilly' , 2 )] )
     ];     
 
+
+    getRecipe(id : number){
+        return this.recipes[id] ;
+    }
     
 
 }

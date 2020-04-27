@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-xs-12">
-        <button class="btn btn-success">
+        <button  (click)="createNewRecipe()"  class="btn btn-success">
             New Recipe
         </button>
         <hr>
@@ -8,7 +8,9 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <app-recipe-item (click)="onRecipeSelectList(recipe)"    *ngFor="let recipe of recipes" [element]="recipe" ></app-recipe-item>
+        <!-- <app-recipe-item (click)="onRecipeSelectList(recipe)"    *ngFor="let recipe of recipes" [element]="recipe" ></app-recipe-item> -->
+        <!-- <app-recipe-item     *ngFor="let recipe of recipes" [element]="recipe" ></app-recipe-item> -->
+        <app-recipe-item  [routerLink]="['/recipe' , i  ]"    *ngFor="let recipe of recipes ; let i = index" [element]="recipe"  [index]="i" ></app-recipe-item>
     </div>
 </div>
 
