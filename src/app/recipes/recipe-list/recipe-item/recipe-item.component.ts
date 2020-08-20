@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Recipe } from '../../recipe.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-item',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recipe-item.component.css']
 })
 export class RecipeItemComponent implements OnInit {
-
-  constructor() { }
-
+  @Input('element') recipe : Recipe ; 
+  @Input() index : number ; 
+  
+  constructor(private router : Router ) { }
+  
   ngOnInit() {
+    console.log(this.recipe)
+    console.log("index : " + this.index) ; 
   }
 
+  showRecipeDetails(){
+    
+  }
+  
 }
