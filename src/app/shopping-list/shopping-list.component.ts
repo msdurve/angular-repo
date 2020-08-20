@@ -34,4 +34,8 @@ export class ShoppingListComponent implements OnInit {
   //    console.log(this.ingredients.length);
 
   // } 
+
+  onItemSelected(input : number){
+    this.shoppingService.serviceSubject.next(input)  ; 
+  }
 }

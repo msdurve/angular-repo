@@ -22,7 +22,12 @@ export class RecipeListComponent implements OnInit {
   constructor(private recipeService : RecipeService , private router : Router , private route :ActivatedRoute) { }
  
   ngOnInit() {
-      this.recipes = this.recipeService.recipes; 
+    this.recipeService.recipeSubject.subscribe(
+      (recipes : Recipe[]) =>{
+          this.recipes = recipes;
+      }
+    )
+    this.recipes = this.recipeService.recipes;   
       console.log(this.recipeService.recipes);
   }
  
@@ -32,6 +37,6 @@ export class RecipeListComponent implements OnInit {
   }
   
   createNewRecipe(){
-    this.router.navigate(['new'] , {relativeTo : this.route , queryParams : {id:1} , fragment:'loading' });
+    this.router.navigate(['new'] , {relativeTo : this.route  });
   }
  }

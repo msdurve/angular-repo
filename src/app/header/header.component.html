@@ -10,15 +10,15 @@
                 <li><a href="#"  (click)="onHeaderClickEvent('ShoppingList')">Shopping List</a></li> -->
 
                 <li    routerLinkActive="active"  ><a  routerLink="/recipe"  >Recipe</a></li>
-                <li    routerLinkActive="active"  ><a  routerLink="/shopping-list"   >Shopping List</a></li>
+                <li    routerLinkActive="active"  ><a  routerLink="/shopping-list"    >Shopping List</a></li>
 
            </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown" appDropdown>
                     <a  class="dropdown-toggle" role="button" >Manage <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a style="cursor: pointer;" >Save</a></li>       
-                        <li><a style="cursor: pointer;" >Fetch Data</a></li>
+                        <li><a style="cursor: pointer;" (click)="onSaveRecipeToServer()" >Save</a></li>       
+                        <li><a style="cursor: pointer;" (click)="fetchRecipeFromServer()"  >Fetch Data</a></li>
                     </ul>
                 </li>
             </ul>
